@@ -5,14 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start": "node dist/server.js",
-    "postinstall": "tsc && cpx 'src/**/*.{ejs}'dist",
+    "postinstall": "tsc && cpx 'src/**/*.ejs' dist",
     "watch-node": "nodemon dist/index.js",
     "watch-ts": "tsc -w",
     "deploy": "git add . && git commit -m Heroku && git push heroku master"
   },
-  "engines": {
-    "node": "v14.10.1"
-  },
+
   "prettier": {
     "printWidth": 120
   },
