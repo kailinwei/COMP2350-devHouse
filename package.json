@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node dist/server.js",
-    "postinstall": "tsc && 'src/**/*.{ejs}'dist --watch ",
+    "postinstall": "tsc && cpx 'src/**/*.{ejs}'dist --watch ",
     "watch-node": "nodemon dist/index.js",
     "watch-ts": "tsc -w",
     "deploy": "git add . && git commit -m Heroku && git push heroku master"
@@ -25,6 +25,7 @@
     "class-transformer": "^0.4.0",
     "class-validator": "^0.13.1",
     "connect-redis": "^5.1.0",
+    "cpx": "^1.5.0",
     "dotenv": "^8.2.0",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
