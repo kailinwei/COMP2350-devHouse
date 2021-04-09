@@ -10,7 +10,6 @@
     "watch-ts": "tsc -w",
     "deploy": "git add . && git commit -m Heroku && git push heroku master"
   },
-
   "prettier": {
     "printWidth": 120
   },
