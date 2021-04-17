@@ -12,4 +12,4 @@ In our code, the file authentication.service.mockup.ts, there is a MockAuthentic
 
 Also, in Authentication.controller.ts file, we have a “registration” method in AuthenticationController class. It is a low level module. In this class, we use a constructor function to provide a service. We wanted to make it dependent on abstractions, we use interface IAuthenticationService instead of using MockAuthenticationService.
 
-![dependencyinversion principle](https://github.com/kailinwei/COMP2350-devHouse/commit/988a274ffb2c960149624140bc3a7ce1aace9fb6)
+![dependencyinversion principle](https://github.com/kailinwei/COMP2350-devHouse/blob/master/SOLID2.png)
