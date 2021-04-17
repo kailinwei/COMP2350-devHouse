@@ -1,40 +1,12 @@
-Breakdown of Work:
+# Applying Solid Principle #
+ 1) Principle being followed: 
+    Open-closed principle states that “objects or entities should be open for extension but closed for modification”. 
+	in our code, we tried to modify a class using “implement”. An example is from post.controller.ts where the PostController implements Icontroller. 
+  > class AuthenticationController implements IController {
+  > public path = "/auth";
+  > public router = express.Router();
 
-Example below:
-March 9th (First Sprint Complete)
-Amy Chan:
-I worked on the following tasks:
-
-1. <Insert Some Task Here> - This task is responsible for xyz functionality.
-2. <Insert Some Task Here> - This task is responsible for xyz functionality.
-3. <Insert Some Task Here> - This task is responsible for xyz functionality.
-
-I also needed to research on Youtube and Google the following things:
-
-1. <Insert Video or Link to thing you needed to research>
-
-John Chen:
-I worked on the following tasks:
-
-1. <Insert Some Task Here> - This task is responsible for xyz functionality.
-2. <Insert Some Task Here> - This task is responsible for xyz functionality.
-3. <Insert Some Task Here> - This task is responsible for xyz functionality.
-
-March 16th (Second Sprint Complete)
-Amy Chan:
-I worked on the following tasks:
-
-1. <Insert Some Task Here> - This task is responsible for xyz functionality.
-2. <Insert Some Task Here> - This task is responsible for xyz functionality.
-3. <Insert Some Task Here> - This task is responsible for xyz functionality.
-
-I also needed to research on Youtube and Google the following things:
-
-1. <Insert Video or Link to thing you needed to research>
-
-John Chen:
-I worked on the following tasks:
-
-1. <Insert Some Task Here> - This task is responsible for xyz functionality.
-2. <Insert Some Task Here> - This task is responsible for xyz functionality.
-3. <Insert Some Task Here> - This task is responsible for xyz functionality.
+  > constructor(service: IAuthenticationService) {
+    this.initializeRoutes();
+  }
+ Rather than dynamically change the class of IController, implements allows ‘PostContoller’ inherit all the methods and properties from ‘IController’ , so we can modify the unique property in the new class. 
