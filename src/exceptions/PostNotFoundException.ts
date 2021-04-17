@@ -7,3 +7,4 @@ class PostNotFoundException extends HttpException {
 }
 
 export default PostNotFoundException;
+ 
